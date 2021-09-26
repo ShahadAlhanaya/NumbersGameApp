@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/mainActivityLayout_cl"
+    android:layout_margin="10dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/guessNumberPrompt_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:padding="10dp"
+            android:background="@color/Blackcurrant_light"
+            android:textColor="@color/Concrete_light"
+            android:text="Guess A Number between 0 and 10" />
+        <TextView
+            android:id="@+id/yourGuess_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:paddingTop="10dp"
+            android:textColor="@color/CeriseRed_dark"
+            android:text="Your guess is" />
+        <TextView
+            android:id="@+id/userGuess_textview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:paddingHorizontal="10dp"
+            android:textSize="60dp"
+            android:maxLength="3"
+            android:maxLines="1"
+            android:textColor="@color/CeriseRed_dark"
+            android:text="4" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/messages_recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <EditText
+            android:id="@+id/guess_editText"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_weight="3"
+            android:hint="Enter your guess"
+            android:background="@drawable/edittext_rounded"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:maxLength="100"
+            />
+
+        <Button
+            android:id="@+id/guess_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="Guess"
+            android:textAllCaps="false"
+            app:cornerRadius="50dp"/>
+
+        <Button
+            android:id="@+id/playAgain_button"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:text="Play Again"
+            android:textAllCaps="false"
+            app:cornerRadius="50dp"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
